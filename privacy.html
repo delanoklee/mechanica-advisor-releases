@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Privacy Policy | Mechanica Advisor</title>
+<meta name="description" content="What the Mechanica Advisor browser extension stores, what it sends, and what it never touches."/>
+<link rel="canonical" href="https://delanoklee.github.io/mechanica-advisor-releases/privacy.html"/>
+<meta name="theme-color" content="#1A2238"/>
+<meta name="robots" content="index,follow"/>
+<style>
+  /* Standalone rather than reusing the Next stylesheet: that file is content
+     hashed, so linking it would break this page the next time the marketing
+     site is rebuilt. Same palette, no shared dependency. */
+  :root{
+    --navy:#1A2238; --navy-deep:#151C30; --panel:#2E3A59;
+    --cream:#F2EFE8; --muted:#AEBACF; --dim:#8B98B5; --gold:#FFC93C;
+  }
+  *{box-sizing:border-box}
+  html{scroll-padding-top:24px}
+  body{
+    margin:0;background:var(--navy);color:var(--cream);
+    font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold)}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+
+  header{padding:30px 40px;border-bottom:1px solid rgba(242,239,232,.12)}
+  header .in{max-width:820px;margin:0 auto;display:flex;align-items:center;gap:13px}
+  .brand{font-size:19px;font-weight:800;letter-spacing:-.02em;color:var(--gold);text-decoration:none}
+  .home{font-size:13.5px;color:var(--dim);text-decoration:none;margin-left:auto}
+  .home:hover{color:var(--cream)}
+
+  main{max-width:820px;margin:0 auto;padding:52px 40px 72px}
+  h1{font-size:34px;line-height:1.15;letter-spacing:-.02em;margin:0 0 10px}
+  .lede{color:var(--muted);font-size:17px;margin:0 0 8px}
+  .updated{color:var(--dim);font-size:13.5px;margin:0 0 40px}
+
+  h2{font-size:21px;letter-spacing:-.01em;margin:44px 0 12px;padding-top:22px;border-top:1px solid rgba(242,239,232,.12)}
+  h2:first-of-type{border-top:0;padding-top:0;margin-top:34px}
+  p{margin:0 0 15px;color:var(--cream)}
+  ul{margin:0 0 15px;padding-left:22px}
+  li{margin-bottom:9px}
+  strong{color:var(--gold);font-weight:650}
+
+  .callout{
+    background:var(--panel);border:1px solid rgba(242,239,232,.14);
+    border-radius:10px;padding:20px 22px;margin:0 0 20px;
+  }
+  .callout p:last-child{margin-bottom:0}
+
+  code{
+    font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;
+    background:rgba(242,239,232,.08);padding:2px 6px;border-radius:4px;color:var(--muted);
+  }
+
+  footer{background:var(--navy-deep);padding:34px 40px;margin-top:20px}
+  footer .in{max-width:820px;margin:0 auto;display:flex;justify-content:space-between;
+    align-items:center;gap:24px;flex-wrap:wrap;font-size:13.5px;color:var(--dim)}
+
+  @media (max-width:700px){
+    header,main,footer{padding-left:22px;padding-right:22px}
+    main{padding-top:38px}
+    h1{font-size:27px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="in">
+    <a class="brand" href="https://getmechanica.com">Mechanica</a>
+    <a class="home" href="https://getmechanica.com">Back to getmechanica.com</a>
+  </div>
+</header>
+
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="lede">Mechanica Advisor browser extension</p>
+  <p class="updated">Last updated 24 August 2026</p>
+
+  <p>
+    Mechanica Advisor is a browser extension for automotive repair shops. It displays
+    questions and notifications from a shop's own Mechanica account on top of the
+    shop-management system the service advisor is already working in.
+  </p>
+
+  <div class="callout">
+    <p>
+      <strong>The short version.</strong> The extension draws on top of your shop
+      system. It never reads out of it. It stores your connection key on your own
+      machine, talks to no server but Mechanica's, and contains no analytics,
+      advertising, or tracking of any kind.
+    </p>
+  </div>
+
+  <h2>What the extension stores</h2>
+  <p>Two values, in the browser's extension storage, on the advisor's own machine:</p>
+  <ul>
+    <li><strong>Connection key</strong> — the credential that identifies the shop's
+      Mechanica account. Entered by the shop on the extension's options page.</li>
+    <li><strong>Server address</strong> — which Mechanica server to talk to. Defaults
+      to <code>https://api.getmechanica.com/advisor</code>.</li>
+  </ul>
+  <p>
+    Neither value is transmitted anywhere except to the Mechanica server named above,
+    and neither is readable from any web page.
+  </p>
+  <p>
+    While the browser is running, the extension also keeps a short-lived list of
+    question identifiers it has already displayed, so the same question is not shown
+    twice. This is discarded when the browser closes.
+  </p>
+
+  <h2>What the extension does not do</h2>
+  <ul>
+    <li>It does <strong>not</strong> read, collect, or transmit the contents of any
+      web page. The extension draws its cards on top of the page; it never reads out
+      of it.</li>
+    <li>It does <strong>not</strong> track browsing history, page visits, or which
+      sites are open.</li>
+    <li>It does <strong>not</strong> contain analytics, advertising, or third-party
+      tracking of any kind.</li>
+    <li>It does <strong>not</strong> sell or share data with anyone. There are no
+      third parties.</li>
+  </ul>
+
+  <h2>What is sent to Mechanica</h2>
+  <p>Only the advisor's own answers, and only to the shop's own Mechanica account:</p>
+  <ul>
+    <li>Which question was answered and which choice was picked.</li>
+    <li>That a question was snoozed, and for how long.</li>
+    <li>That a notification was dismissed.</li>
+    <li>The extension version, so support can tell the browser extension apart from
+      the desktop application when a shop reports a problem.</li>
+  </ul>
+  <p>
+    These are sent to the server address configured above, authenticated with the
+    shop's connection key.
+  </p>
+
+  <h2>Permissions, and why each exists</h2>
+  <ul>
+    <li><strong>activeTab</strong> — read the current tab only at the moment the
+      advisor clicks the Mechanica icon or presses Alt+M, so the extension knows
+      which tab to draw in.</li>
+    <li><strong>scripting</strong> — inject the card layer into the page, and
+      register it to reappear on sites the shop has approved.</li>
+    <li><strong>storage</strong> — hold the two values listed above.</li>
+    <li><strong>alarms</strong> — check for new questions on a timer.</li>
+    <li><strong>api.getmechanica.com</strong> — reach the shop's Mechanica account.</li>
+    <li><strong>All sites (optional)</strong> — never requested at install. Requested
+      either for one site at a time, when the advisor first opens Mechanica on a shop
+      system that is not built in, or for all sites at once if the shop turns that on
+      from the options page. Either grant can be withdrawn at any time in the
+      browser's settings or from the options page.</li>
+  </ul>
+
+  <h2>Data retention and deletion</h2>
+  <p>
+    The connection key and server address stay on the advisor's machine until they
+    click <strong>Disconnect</strong> on the options page, or uninstall the extension.
+    Either one removes them.
+  </p>
+  <p>
+    For data held in a shop's Mechanica account, contact us at the address below.
+  </p>
+
+  <h2>Contact</h2>
+  <p><a href="mailto:privacy@getmechanica.com">privacy@getmechanica.com</a></p>
+</main>
+
+<footer>
+  <div class="in">
+    <div><span style="color:var(--gold);font-weight:800">Mechanica</span> &middot; getmechanica.com</div>
+    <div>&copy; 2026 Mechanica &middot; Automated estimating for repair shops</div>
+  </div>
+</footer>
+
+</body>
+</html>
