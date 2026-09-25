@@ -66,7 +66,7 @@
   }
   .callout p:last-child{margin-bottom:0}
 
-  code{font:400 13.5px/1.5 var(--mono);background:#E9E6DE;padding:2px 6px;border-radius:4px;color:var(--ink)}
+  code{font:400 13.5px/1.5 var(--mono);background:#E9E6DE;padding:2px 6px;border-radius:4px;color:var(--ink);overflow-wrap:anywhere}
 
   footer{border-top:1px solid var(--line);margin-top:26px}
   footer .in{max-width:840px;margin:0 auto;padding:28px 40px;display:flex;justify-content:space-between;
@@ -97,7 +97,7 @@
   <div class="kicker"></div>
   <h1>Extension Privacy Policy</h1>
   <p class="sub">Mechanica Advisor browser extension</p>
-  <p class="updated">Last updated August 25, 2026</p>
+  <p class="updated">Last updated September 25, 2026</p>
 
   <p>
     Mechanica Advisor is a browser extension for automotive repair shops. It displays
@@ -121,16 +121,18 @@
   </div>
 
   <h2>What the extension stores</h2>
-  <p>Two values, in the browser's extension storage, on the advisor's own machine:</p>
+  <p>Three values, in the browser's extension storage, on the advisor's own machine:</p>
   <ul>
     <li><strong>Connection key</strong> — the credential that identifies the shop's
       Mechanica account. Entered by the shop on the extension's options page.</li>
     <li><strong>Server address</strong> — which Mechanica server to talk to. Defaults
-      to <code>https://api.getmechanica.com/advisor</code>.</li>
+      to Mechanica's hosted server, <code>https://mechanica-estimator-248053890274.herokuapp.com/api/advisor</code>.</li>
+    <li><strong>Shop name</strong> — as reported by that server, so the options page
+      can show which shop this browser is connected to.</li>
   </ul>
   <p>
-    Neither value is transmitted anywhere except to the Mechanica server named above,
-    and neither is readable from any web page.
+    The connection key is sent only to the Mechanica server named above. None of these
+    values is readable from any web page.
   </p>
   <p>
     While the browser is running, the extension also keeps a short-lived list of
@@ -152,11 +154,14 @@
   </ul>
 
   <h2>What is sent to Mechanica</h2>
-  <p>Only the advisor's own answers, and only to the shop's own Mechanica account:</p>
+  <p>Only what the advisor does with a card, and only to the shop's own Mechanica account:</p>
   <ul>
     <li>Which question was answered and which choice was picked.</li>
     <li>That a question was snoozed, and for how long.</li>
-    <li>That a notification was dismissed.</li>
+    <li>That a notification was acknowledged.</li>
+    <li>Any details the advisor types into a question's <strong>Add details</strong> box
+      (up to 4,000 characters), sent only when they press send, so Mechanica can
+      continue that estimate.</li>
     <li>The extension version, so support can tell the browser extension apart from
       the desktop application when a shop reports a problem.</li>
   </ul>
@@ -172,7 +177,7 @@
       which tab to draw in.</li>
     <li><strong>scripting</strong> — inject the card layer into the page, and
       register it to reappear on sites the shop has approved.</li>
-    <li><strong>storage</strong> — hold the two values listed above.</li>
+    <li><strong>storage</strong> — hold the values listed above.</li>
     <li><strong>alarms</strong> — check for new questions on a timer.</li>
     <li><strong>Your Mechanica server</strong> — requested when the shop connects,
       for that one address, so the extension can reach the shop's account.</li>
